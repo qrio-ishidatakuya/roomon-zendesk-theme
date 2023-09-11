@@ -664,7 +664,7 @@ $(window).bind("load", function () {
   if (document.URL.match("/requests/new")) {
     $(function(){
       const searchParams = new URLSearchParams( window.location.search );
-      const title = '備え付けスマートロック問い合わせ';
+      var title = '備え付けスマートロック問い合わせ';
       if (!searchParams.has("ticket_form_id")) {
         title = '備え付けスマートロック問い合わせ';    
       } else {
