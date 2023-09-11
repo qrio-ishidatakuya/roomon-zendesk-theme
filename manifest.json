@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen_roomon",
   "author": "Zendesk",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [

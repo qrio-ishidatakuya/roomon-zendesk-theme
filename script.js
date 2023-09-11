@@ -660,30 +660,32 @@
 
 })();
 
-$(window).bind("load", function () {
-  if (document.URL.match("/requests/new")) {
-    $(function(){
-      const searchParams = new URLSearchParams( window.location.search );
-      var title = '備え付けスマートロック問い合わせ';
-      if (!searchParams.has("ticket_form_id")) {
-        title = '備え付けスマートロック問い合わせ';    
-      } else {
-        const searchParamsTicketFormId = searchParams.get("ticket_form_id");
-        switch(searchParamsTicketFormId) {
-          case '22735362701081':
-            title = '備え付けスマートロックお問い合わせ（使い方・製品仕様について）';
-            break;
-          case '22836351324057':
-            title = '備え付けスマートロック問い合わせ（トラブル・不具合について）';
-            break;
-          default:
-            title = '備え付けスマートロック問い合わせ';
-            break;
-        };
-      }
-      document.title = title;
-      $("h1:contains('リクエストを送信')").text(title);
-      $(".breadcrumbs li:contains('リクエストを送信')").text(title);    
-    });
-  }
+window.addEventListener('DOMContentLoaded', function(){
+  $(window).bind("load", function () {
+    if (document.URL.match("/requests/new")) {
+      $(function(){
+        const searchParams = new URLSearchParams( window.location.search );
+        var title = '備え付けスマートロック問い合わせ';
+        if (!searchParams.has("ticket_form_id")) {
+          title = '備え付けスマートロック問い合わせ';    
+        } else {
+          const searchParamsTicketFormId = searchParams.get("ticket_form_id");
+          switch(searchParamsTicketFormId) {
+            case '22735362701081':
+              title = '備え付けスマートロックお問い合わせ（使い方・製品仕様について）';
+              break;
+            case '22836351324057':
+              title = '備え付けスマートロック問い合わせ（トラブル・不具合について）';
+              break;
+            default:
+              title = '備え付けスマートロック問い合わせ';
+              break;
+          };
+        }
+        document.title = title;
+        $("h1:contains('リクエストを送信')").text(title);
+        $(".breadcrumbs li:contains('リクエストを送信')").text(title);    
+      });
+    }
+  });
 });
