@@ -664,11 +664,11 @@ $(window).bind("load", function () {
   if (document.URL.match("/requests/new")) {
     $(function(){
       const searchParams = new URLSearchParams( window.location.search );
+      const title = '備え付けスマートロック問い合わせ';
       if (!searchParams.has("ticket_form_id")) {
-        document.title = '備え付けスマートロック問い合わせ';    
+        title = '備え付けスマートロック問い合わせ';    
       } else {
         const searchParamsTicketFormId = searchParams.get("ticket_form_id");
-        const title = '備え付けスマートロック問い合わせ';
         switch(searchParamsTicketFormId) {
           case '22735362701081':
             title = '備え付けスマートロックお問い合わせ（使い方・製品仕様について）';
