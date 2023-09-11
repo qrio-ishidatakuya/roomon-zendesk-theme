@@ -660,7 +660,7 @@
 
 })();
 
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('load', function(){
   if (document.URL.match("/requests/new")) {
     $(function(){
       const searchParams = new URLSearchParams( window.location.search );
