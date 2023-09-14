@@ -663,10 +663,11 @@
 window.addEventListener('load', function(){
   if (document.URL.match("/requests/new")) {
     $(function(){
+      var title = 'お問い合わせ';
+      /*
       const searchParams = new URLSearchParams( window.location.search );
-      var title = '備え付けスマートロック問い合わせ';
       if (!searchParams.has("ticket_form_id")) {
-        title = '備え付けスマートロック問い合わせ';    
+        title = 'お問い合わせ';    
       } else {
         const searchParamsTicketFormId = searchParams.get("ticket_form_id");
         switch(searchParamsTicketFormId) {
@@ -681,6 +682,7 @@ window.addEventListener('load', function(){
             break;
         };
       }
+      */
       document.title = title;
       $("h1:contains('リクエストを送信')").text(title);
       $(".breadcrumbs li:contains('リクエストを送信')").text(title);    
